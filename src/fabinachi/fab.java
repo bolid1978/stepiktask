@@ -45,7 +45,7 @@ public class fab {
         for (int i = 2; i < n; i++) {
             long sum = cifra.get(i - 1) + cifra.get(i - 2);
             cifra.add(sum);
-           // System.out.println(cifra);
+            System.out.println(cifra);
         }
         System.out.println(cifra.get(cifra.size() - 1) + cifra.get(cifra.size() - 2));
 
