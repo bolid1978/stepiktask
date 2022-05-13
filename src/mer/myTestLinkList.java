@@ -23,12 +23,7 @@ public class myTestLinkList {
          }
      }
 
-    myTestLinkList revers(){
-         myTestLinkList revers = new myTestLinkList();
 
-
-         return revers;
-    }
 
      void print(){
          Node node = head;
