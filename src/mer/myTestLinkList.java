@@ -23,6 +23,13 @@ public class myTestLinkList {
          }
      }
 
+    myTestLinkList revers(){
+         myTestLinkList revers = new myTestLinkList();
+
+
+         return revers;
+    }
+
      void print(){
          Node node = head;
          while(node != null){
@@ -34,6 +41,7 @@ public class myTestLinkList {
      public Node getNodeHead(){
          return head;
      }
+
 
 
 

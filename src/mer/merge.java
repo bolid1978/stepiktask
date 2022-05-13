@@ -47,7 +47,7 @@ public class merge {
     }
        static public  Node merge(Node head1, Node head2){
         LinkedList<Integer> result = new LinkedList<>();
-      //  myTestLinkList resulMy = new myTestLinkList();
+        myTestLinkList resulMy = new myTestLinkList();
         Node NodeOne = head1;
         Node NodeTwo = head2;
         while(true){
@@ -55,7 +55,7 @@ public class merge {
                 while (NodeTwo != null)
                 {
                     result.add(NodeTwo.getData());
-                   // resulMy.add(NodeTwo.getData());
+                    resulMy.add(NodeTwo.getData());
 
                     NodeTwo = NodeTwo.getNext();
                 }
@@ -65,32 +65,41 @@ public class merge {
                 while (NodeOne != null)
                 {
                     result.add(NodeOne.getData());
-                   // resulMy.add(NodeOne.getData());
+                    resulMy.add(NodeOne.getData());
                     NodeOne = NodeOne.getNext();
                 }
                 break;
             }
 
             if(NodeOne.getData() <= NodeTwo.getData()) {
-               result.add(NodeOne.getData());
-              //  resulMy.add(NodeOne.getData());
+                result.add(NodeOne.getData());
+                resulMy.add(NodeOne.getData());
                 NodeOne = NodeOne.getNext();
 
             }
             else{
                 result.add(NodeTwo.getData());
-              //  resulMy.add(NodeTwo.getData());
+                resulMy.add(NodeTwo.getData());
                 NodeTwo = NodeTwo.getNext();
 
             }
 
         }
-          // resulMy.print();
+           resulMy.print();
          //  System.out.println(result.getLast());
+           myTestLinkList revers = new myTestLinkList();
+           Node nodeIn = resulMy.getNodeHead();
+           while(nodeIn != null){
+
+               revers.add(nodeIn.getData());
+               nodeIn = nodeIn.getNext();
 
 
-        return null;
-    }
+           }
+           revers.print();
+           return revers.getNodeHead();
+
+       }
 
 
 
