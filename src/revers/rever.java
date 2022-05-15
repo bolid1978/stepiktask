@@ -70,21 +70,38 @@ public class rever {
         head = ten;
 
         print(head);
-        ArrayList<Node> nodeArrayList = new ArrayList<>();
-        Node nodeREvers =  new Node() ;
-        while(head != null){
-           nodeREvers = head;
-           nodeArrayList.add(nodeREvers);
-           head = head.getNext();
-        }
-        head = nodeREvers;
 
-        System.out.println(nodeREvers.getData());
-        for (Node el:nodeArrayList
-             ) {
-            System.out.print(el.getData() + " ");
-        }
+        ArrayList<Node> nodeArrayList = new ArrayList<>();
+        rev(head);
+
+
+
+
+
     }
+
+    static Node rev(Node head){
+        Node nodaNewHead ;
+        Node node ;
+        nodaNewHead = head;
+
+        if(head.getNext() == null) return nodaNewHead;
+        node = head.getNext();
+        node.setNext(nodaNewHead);
+        nodaNewHead = node;
+        head = head.getNext();
+        if(head.getNext() == null) return nodaNewHead;
+        node = head.getNext();
+        node.setNext(nodaNewHead);
+        nodaNewHead = node;
+        head = head.getNext();
+
+
+
+   return nodaNewHead;
+
+    }
+
     static void print(Node head){
         Node node = head;
         while(node != null){
