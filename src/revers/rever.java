@@ -71,7 +71,7 @@ public class rever {
 
         print(head);
 
-        ArrayList<Node> nodeArrayList = new ArrayList<>();
+
         rev(head);
 
 
@@ -85,20 +85,44 @@ public class rever {
         Node node ;
         nodaNewHead = head;
 
+
         if(head.getNext() == null) return nodaNewHead;
+
         node = head.getNext();
         node.setNext(nodaNewHead);
-        nodaNewHead = node;
         head = head.getNext();
+        nodaNewHead.setNext(null);
+
+        nodaNewHead = node;
+
         if(head.getNext() == null) return nodaNewHead;
+
         node = head.getNext();
         node.setNext(nodaNewHead);
-        nodaNewHead = node;
         head = head.getNext();
+        nodaNewHead.setNext(null);
+
+        nodaNewHead = node;
+        if(head.getNext() == null) return nodaNewHead;
+
+        node = head.getNext();
+        node.setNext(nodaNewHead);
+        head = head.getNext();
+        nodaNewHead.setNext(null);
+
+        nodaNewHead = node;
+        if(head.getNext() == null) return nodaNewHead;
+
+        node = head.getNext();
+        node.setNext(nodaNewHead);
+        head = head.getNext();
+        nodaNewHead.setNext(null);
+
+        nodaNewHead = node;
+        if(head.getNext() == null) return nodaNewHead;
 
 
-
-   return nodaNewHead;
+        return nodaNewHead;
 
     }
 
