@@ -81,17 +81,20 @@ public class rever {
     }
 
     static Node rev(Node head){
-        Node nodaNewHead ;
+        Node nodaNewHead = new Node() ;
         Node node ;
-        nodaNewHead = head;
+//        nodaNewHead = head;
+        nodaNewHead = head ;
 
 
-        if(head.getNext() == null) return nodaNewHead;
+
+
+        if(head.getNext() == null) return nodaNewHead = head;
 
         node = head.getNext();
         node.setNext(nodaNewHead);
         head = head.getNext();
-        nodaNewHead.setNext(null);
+
 
         nodaNewHead = node;
 
@@ -100,7 +103,7 @@ public class rever {
         node = head.getNext();
         node.setNext(nodaNewHead);
         head = head.getNext();
-        nodaNewHead.setNext(null);
+
 
         nodaNewHead = node;
         if(head.getNext() == null) return nodaNewHead;
