@@ -9,6 +9,24 @@ package mer;
 //        7 8 9 10
 //        Sample Output 2:
 //        1 2 4 5 6 7 8 9 10
+//---------------самое популярное
+//Node merge(Node head1, Node head2){
+//        if(head1 == null) {
+//        return head2;
+//        }
+//        if(head2 == null) {
+//        return head1;
+//        }
+//        Node node = new Node();
+//        if(head1.getData() < head2.getData()) {
+//        node.setData(head1.getData());
+//        node.setNext(merge(head1.getNext(), head2));
+//        } else {
+//        node.setData(head2.getData());
+//        node.setNext(merge(head1, head2.getNext()));
+//        }
+//        return node;
+//        }
 
 import java.util.LinkedList;
 
@@ -47,7 +65,7 @@ public class merge {
     }
        static public  Node merge(Node head1, Node head2){
         LinkedList<Integer> result = new LinkedList<>();
-      //  myTestLinkList resulMy = new myTestLinkList();
+        myTestLinkList resulMy = new myTestLinkList();
         Node NodeOne = head1;
         Node NodeTwo = head2;
         while(true){
@@ -55,7 +73,7 @@ public class merge {
                 while (NodeTwo != null)
                 {
                     result.add(NodeTwo.getData());
-                   // resulMy.add(NodeTwo.getData());
+                    resulMy.add(NodeTwo.getData());
 
                     NodeTwo = NodeTwo.getNext();
                 }
@@ -65,32 +83,41 @@ public class merge {
                 while (NodeOne != null)
                 {
                     result.add(NodeOne.getData());
-                   // resulMy.add(NodeOne.getData());
+                    resulMy.add(NodeOne.getData());
                     NodeOne = NodeOne.getNext();
                 }
                 break;
             }
 
             if(NodeOne.getData() <= NodeTwo.getData()) {
-               result.add(NodeOne.getData());
-              //  resulMy.add(NodeOne.getData());
+                result.add(NodeOne.getData());
+                resulMy.add(NodeOne.getData());
                 NodeOne = NodeOne.getNext();
 
             }
             else{
                 result.add(NodeTwo.getData());
-              //  resulMy.add(NodeTwo.getData());
+                resulMy.add(NodeTwo.getData());
                 NodeTwo = NodeTwo.getNext();
 
             }
 
         }
-          // resulMy.print();
+           resulMy.print();
          //  System.out.println(result.getLast());
+           myTestLinkList revers = new myTestLinkList();
+           Node nodeIn = resulMy.getNodeHead();
+           while(nodeIn != null){
+
+               revers.add(nodeIn.getData());
+               nodeIn = nodeIn.getNext();
 
 
-        return null;
-    }
+           }
+           revers.print();
+           return revers.getNodeHead();
+
+       }
 
 
 

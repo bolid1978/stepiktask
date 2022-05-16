@@ -23,6 +23,8 @@ public class myTestLinkList {
          }
      }
 
+
+
      void print(){
          Node node = head;
          while(node != null){
@@ -34,6 +36,7 @@ public class myTestLinkList {
      public Node getNodeHead(){
          return head;
      }
+
 
 
 
