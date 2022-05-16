@@ -2,14 +2,18 @@ package mer;
 
 
 
-public class Node {
+public class Node implements Cloneable{
 
         private int data;
         private Node nextNode = null;
 
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
 
-        public int getData() {
+    public int getData() {
             return data;
         }
 

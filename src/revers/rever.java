@@ -17,6 +17,7 @@ public class rever {
     public static void main(String[] args) {
 
         Node head = new Node();
+
         head.setData(0);
 
         Node one = new Node();
@@ -81,49 +82,69 @@ public class rever {
     }
 
     static Node rev(Node head){
-        Node nodaNewHead = new Node() ;
-        Node node ;
-//        nodaNewHead = head;
+          Node nodaNewHead ;
+//
+//        try {
+//            nodaNewHead = (Node) head.clone();
+//            nodaNewHead.setNext(null);
+//        } catch (CloneNotSupportedException e) {
+//            e.printStackTrace();
+//        }
+
+
+
         nodaNewHead = head ;
+        Node nextAdressOridginal;
 
 
 
 
-        if(head.getNext() == null) return nodaNewHead = head;
-
-        node = head.getNext();
-        node.setNext(nodaNewHead);
+        if(head.getNext() == null) { return nodaNewHead;}
+        Node nodeOne = new Node();
+        nodeOne = head.getNext();
+        nextAdressOridginal = nodeOne.getNext();
+        nodeOne.setNext(head);
         head = head.getNext();
+        Node nullNode = nodeOne.getNext();
+        nullNode.setNext(null);
 
 
-        nodaNewHead = node;
 
         if(head.getNext() == null) return nodaNewHead;
+        Node Two = new Node();
 
-        node = head.getNext();
-        node.setNext(nodaNewHead);
-        head = head.getNext();
+        Two = nextAdressOridginal;
+        nextAdressOridginal = Two.getNext();
+        Two.setNext(nodeOne);
 
+       // head = nextAdressOridginal;
 
-        nodaNewHead = node;
         if(head.getNext() == null) return nodaNewHead;
+        Node Free = new Node();
 
-        node = head.getNext();
-        node.setNext(nodaNewHead);
-        head = head.getNext();
-        nodaNewHead.setNext(null);
+        Free = nextAdressOridginal;
+        nextAdressOridginal = Free.getNext();
+        Free.setNext(Two);
 
-        nodaNewHead = node;
+    //    head = head.getNext();
+
         if(head.getNext() == null) return nodaNewHead;
+        Node Four = new Node();
 
-        node = head.getNext();
-        node.setNext(nodaNewHead);
-        head = head.getNext();
-        nodaNewHead.setNext(null);
+        Four = nextAdressOridginal;
+        nextAdressOridginal = Four.getNext();
+        Four.setNext(Free);
 
-        nodaNewHead = node;
+      //  head = head.getNext();
+
         if(head.getNext() == null) return nodaNewHead;
+        Node Five = new Node();
 
+        Five = nextAdressOridginal;
+        nextAdressOridginal = Five.getNext();
+        Five.setNext(Four);
+
+     //   head = head.getNext();
 
         return nodaNewHead;
 
