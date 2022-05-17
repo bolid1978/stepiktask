@@ -1,14 +1,16 @@
 package revers;
 
 import java.util.ArrayList;
-///---------мое на сайте
-//Node reverse(Node head){
-//        Node nodeREvers;
-//        if(head == null) return null ;
-//        if(head != null){
-//        nodeREvers = reverse(head.getNext());
+//----------правельно
+//  Node reverse(Node head){
+//        Node next = head.getNext();
+//        head.setNext(null);
+//        while (next != null) {
+//        Node temp = next.getNext();
+//        next.setNext(head);
+//        head = next;
+//        next = temp;
 //        }
-//
 //        return head;
 //        }
 
@@ -84,6 +86,8 @@ public class rever {
     static Node rev(Node head){
 
         Node nextAdressOridginal;
+        Node prevNode ;
+        Node newNode ;
 
         if(head.getNext() == null) { return head;}
         Node nodeOne = new Node();
@@ -94,8 +98,8 @@ public class rever {
         Node nullNode = nodeOne.getNext();
         nullNode.setNext(null);
 
-        Node prevNode = nodeOne;
-        Node newNode ;
+        prevNode = nodeOne;
+
         while(true) {
 
             if (nextAdressOridginal == null) return prevNode;
