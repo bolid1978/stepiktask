@@ -10,6 +10,13 @@ import java.util.concurrent.ThreadLocalRandom;
 //        функция должна вернуть значение глубины дерева.
 //        Дерево состоящее всего из одного элемента имеет глубину равной единице.
 //        На вход теста передаются параметры, необходимые для генерации рандомизированного дерева.
+
+//   int getMaxDepth(Stree node){
+// if((node == null) return 0;
+// return max(getMaxDepth(getMaxDepth->lefr),getMaxDepth(getMaxDepth->Right)) + 1;
+
+
+
 public class wood {
 
 
@@ -17,6 +24,7 @@ public class wood {
     public static void main(String[] args) {
         TreeSet<Integer> treeSet = new TreeSet<>();
         ThreadLocalRandom  cifra = ThreadLocalRandom.current();
+
         for (int i = 0; i < 20; i++) {
             treeSet.add(cifra.nextInt(0,1000));
         }
@@ -24,6 +32,23 @@ public class wood {
 
 
 
+
+
+    }
+    static int treeDepth(Node root) {
+        if(root == null) return 0;
+        treeDepth(root.getLeft());
+        System.out.print(root + " ");
+        treeDepth(root.getRight());
+        return 0;
+
+    }
+    //--------тут нуна слепить дерево для теста
+    class BinarWoodNode {
+        Node node;
+        void insert(Node node){
+
+        }
 
     }
 
