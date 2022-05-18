@@ -29,7 +29,7 @@ public class wood {
             treeSet.add(cifra.nextInt(0,1000));
         }
         System.out.println(treeSet);
-        Math.max(, )
+
 
 
 
