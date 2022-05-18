@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 //   int getMaxDepth(Stree node){
 // if((node == null) return 0;
-// return max(getMaxDepth(getMaxDepth->lefr),getMaxDepth(getMaxDepth->Right)) + 1;
+// return max(getMaxDepth(getMaxDepth->lefr),getMaxDepth(getMaxDepth->Right))) + 1;
 
 
 
@@ -29,6 +29,7 @@ public class wood {
             treeSet.add(cifra.nextInt(0,1000));
         }
         System.out.println(treeSet);
+        Math.max(, )
 
 
 
