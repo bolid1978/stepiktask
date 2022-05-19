@@ -22,6 +22,11 @@ public class wood {
 
 
     public static void main(String[] args) {
+        System.out.println(Integer.MAX_VALUE + " " + Integer.MIN_VALUE);
+        int a = 12345;
+        StringBuilder str = new StringBuilder(12345 + "");
+        str.reverse();
+        System.out.println(Integer.parseInt(str.toString()));
         TreeSet<Integer> treeSet = new TreeSet<>();
         ThreadLocalRandom  cifra = ThreadLocalRandom.current();
 
