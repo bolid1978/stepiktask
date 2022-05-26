@@ -15,12 +15,18 @@ public class MyBigNumber implements BigNumber{
         int cifra = 0;
         String longNumber = bigNumber.toString();
         String shortNumber = number;
-        if(number.length() > bigNumber.toString().length()) {
-            longNumber = number;
-            shortNumber = bigNumber.toString();
-        }
-        for (int i = shortNumber.length() - 1; i > -1   ; i--) {
-            cifra = Integer.parseInt(longNumber.charAt(i) +"") + Integer.parseInt(shortNumber.charAt(i) +"") + transfer;
+//        if(number.length() > bigNumber.toString().length()) {
+//            longNumber = number;
+//            shortNumber = bigNumber.toString();
+//        }
+        int i = shortNumber.length() - 1;
+        int j = longNumber.length() - 1;
+        int one = 0;
+        int two = 0;
+        while (true) {
+            if(j >= 0) one = Integer.parseInt(longNumber.charAt(j) + "");
+            if(i >= 0) two = Integer.parseInt(shortNumber.charAt(i) + "");
+            cifra = one + two + transfer;
 
             if(cifra > 9) {
                 cifra %= 10;
@@ -30,9 +36,15 @@ public class MyBigNumber implements BigNumber{
 
             char revers = Character.forDigit(cifra, 10);
             StringBuilder stringBuilder = new StringBuilder(longNumber);
-            stringBuilder.setCharAt(i, revers);
+            stringBuilder.setCharAt(j, revers);
             longNumber = stringBuilder.toString();
-           // System.out.println(longNumber);
+
+            i--;j--;
+            one = two  = 0;
+
+            if(i < 0 && j < 0 ) break;
+
+
         }
         //   если transfer равен 1 добавить единицу в строку
         if(transfer == 1) longNumber = "1" + longNumber;
