@@ -35,7 +35,7 @@ public class MyBigNumber implements BigNumber{
             System.out.println(longNumber);
         }
         //   если transfer равен 1 добавить единицу в строку
-        if(transfer == 1) longNumber.
+        //if(transfer == 1) longNumber.
         System.out.println(longNumber);
 
         System.out.println(longNumber + "  " + shortNumber);
