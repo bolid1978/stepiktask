@@ -1,5 +1,7 @@
 package BidNumber;
 
+import java.util.Arrays;
+
 public class MyBigNumber implements BigNumber{
 
     private final String number;
@@ -60,10 +62,22 @@ public class MyBigNumber implements BigNumber{
         int cifra = 0;
         String longNumber = bigNumber.toString();
         String shortNumber = number;
+
         if(number.length() > bigNumber.toString().length()) {
             longNumber = number;
             shortNumber = bigNumber.toString();
         }
+        //
+        //  2 выясняем какую операцию делать
+        //  2.1 Если второе число с минусом идём на сложение так как минус на минус даёт плюс
+        //  2.1.2 Если второе число с плюсом, а мы выполняем вычитание то смотрим на первое
+        //  2.1.2.1 Если первое число с минусом выполняем сложение и ставим минус перед ответом
+        //  2.1.2.2 Если первое число с плюсом
+        //  2.1.2.2.1 Сортируем числа от меньшего к большему
+        //  2.1.2.2.2 Вычитаем из большего меньшее
+        //  2.1.2.2.3 Ставим минус перед ответом если первое число было меньше второго
+
+
 
 
 
@@ -79,6 +93,16 @@ public class MyBigNumber implements BigNumber{
     @Override
     public String toString() {
         return number;
+    }
+
+    //---------сортирует по модулю по возростанию два числа представленые ввиде стороки
+    //-------
+    private String[] mass(String numberOne,String numberTwo){
+       return null;
+    }
+    //---------вычитание из большего меньшее
+    private String sunMaxMin(String [] str){
+        return null;
     }
 
 

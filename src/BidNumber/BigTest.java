@@ -21,10 +21,11 @@ package BidNumber;
 public class BigTest {
 
     public static void main(String[] args) {
-        MyBigNumber myBigNumber = new MyBigNumber("5") ;
-        System.out.println("98027450742057608221309764383410169802626");
-        System.out.println("98027450742057608221309764383410169802626");
-        System.out.println(myBigNumber.add(new MyBigNumber("25")));
+        MyBigNumber myBigNumber = new MyBigNumber("50") ;
+//        System.out.println("98027450742057608221309764383410169802626");
+//        System.out.println("98027450742057608221309764383410169802626");
+//        System.out.println(myBigNumber.add(new MyBigNumber("25")));
+        myBigNumber.sub(new MyBigNumber("25"));
 
 
 
