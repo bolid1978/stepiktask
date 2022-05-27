@@ -13,14 +13,18 @@ public class MyBigNumber implements BigNumber{
 
     @Override
     public BigNumber add(BigNumber bigNumber) {
+        // 1. Выясняем какую операцию делать
+        // 1.2 Если одно число с минусом  то
+        // 1.2.1 Если первое число с минусом вычитаем из второго первое
+        // 1.2.2 Если второе число с минусом вычитаем из первого второе
+        // 1.3 Если минусов нет перед числами делаем сложение
+
         int transfer = 0;
         int cifra = 0;
         String longNumber = bigNumber.toString();
         String shortNumber = number;
-//        if(number.length() > bigNumber.toString().length()) {
-//            longNumber = number;
-//            shortNumber = bigNumber.toString();
-//        }
+
+
         int i = shortNumber.length() - 1;
         int j = longNumber.length() - 1;
         int one = 0;
