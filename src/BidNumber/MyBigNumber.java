@@ -104,10 +104,19 @@ public class MyBigNumber implements BigNumber{
     }
 
     //---------сортирует по модулю по возростанию два числа представленые ввиде стороки
-    //-------
+
+    //-------------складывает два положительных числа -----------------------------
+
+    private String addTwoNumber(String one ,String two){
+
+
+        return null;
+    }
+    //-------возвращает сначала большое по модулю потом меньшее по модулю
     private String[] mass(String numberOne,String numberTwo){
        return null;
     }
+
     //---------вычитание из большего меньшее
     private String sunMaxMin(String [] str){
         return null;
